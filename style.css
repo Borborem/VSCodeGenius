@@ -1,0 +1,35 @@
+/* style.css */
+body {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: white;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.color {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+#green { background-color: green; }
+#red { background-color: red; }
+#yellow { background-color: yellow; }
+#blue { background-color: blue; }
+
+.color.active {
+  opacity: 1;
+  box-shadow: 0 0 20px white;
+}
