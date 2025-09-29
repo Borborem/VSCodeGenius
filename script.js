@@ -1,14 +1,19 @@
 // script.js
-const colors = ['green', 'red', 'yellow', 'blue'];
+const colors = ['green', 'red', 'yellow', 'blue', 'purple', 'violet', 'orange', 'limegreen', 'white'];
 let sequence = [];
 let playerSequence = [];
 let round = 0;
 
 const colorFrequencies = {
-  green: 261.6,  // C4
-  red: 329.6,    // E4
-  yellow: 392.0, // G4
-  blue: 523.3    // C5
+  green: 261.6,      // C4
+  red: 329.6,        // E4
+  yellow: 392.0,     // G4
+  blue: 523.3,       // C5
+  purple: 349.2,     // F4
+  violet: 440.0,     // A4
+  orange: 293.7,     // D4
+  limegreen: 587.3,   // D5
+  white: 659.3      // E5
 };
 
 function playNote(frequency) {
@@ -88,7 +93,10 @@ colorElements.forEach(el => {
 function checkInput() {
   const currentIndex = playerSequence.length - 1;
   if (playerSequence[currentIndex] !== sequence[currentIndex]) {
-    alert('Você errou! Tente novamente.');
+    // Aguarda o som/efeito antes de alertar e encerrar
+    setTimeout(() => {
+      alert('Você errou! Tente novamente.');
+    }, 400); // espera o flash terminar
     return;
   }
 

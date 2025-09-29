@@ -8,8 +8,8 @@ body {
 
 #game-board {
   display: grid;
-  grid-template-columns: repeat(2, 150px);
-  grid-template-rows: repeat(2, 150px);
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
   gap: 10px;
   justify-content: center;
   margin: 20px auto;
@@ -28,6 +28,11 @@ body {
 #red { background-color: red; }
 #yellow { background-color: yellow; }
 #blue { background-color: blue; }
+#purple { background-color: purple; }
+#violet { background-color: violet; }
+#orange { background-color: orange; }
+#limegreen { background-color: limegreen; }
+#white { background-color: white; color: black; }
 
 .color.active {
   opacity: 1;
