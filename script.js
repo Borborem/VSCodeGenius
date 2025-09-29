@@ -35,11 +35,24 @@ function startGame() {
   sequence = [];
   playerSequence = [];
   round = 0;
+  updateRoundDisplay();
   nextRound();
+}
+
+function updateRoundDisplay() {
+  let roundDisplay = document.getElementById('round-display');
+  if (!roundDisplay) {
+    roundDisplay = document.createElement('div');
+    roundDisplay.id = 'round-display';
+    roundDisplay.style.margin = '10px';
+    document.body.insertBefore(roundDisplay, document.getElementById('game-board'));
+  }
+  roundDisplay.textContent = `Rodada: ${round}`;
 }
 
 function nextRound() {
   round++;
+  updateRoundDisplay();
   playerSequence = [];
   const nextColor = colors[Math.floor(Math.random() * 4)];
   sequence.push(nextColor);
