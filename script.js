@@ -59,7 +59,7 @@ function nextRound() {
   round++;
   updateRoundDisplay();
   playerSequence = [];
-  const nextColor = colors[Math.floor(Math.random() * 4)];
+  const nextColor = colors[Math.floor(Math.random() * 9)];
   sequence.push(nextColor);
   playSequence();
 }
@@ -70,7 +70,7 @@ function playSequence() {
     setTimeout(() => {
       flashColor(color);
     }, delay);
-    delay += 600;
+    delay += 500;
   });
 }
 
